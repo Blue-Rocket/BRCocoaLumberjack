@@ -57,8 +57,6 @@
 		C910053C17BDCA6C00B4BE06 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
 		C910053D17BDCA6C00B4BE06 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
 		C910053E17BDCA6C00B4BE06 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
-		C910054C17BDCAD000B4BE06 /* BRLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRLog.h; sourceTree = "<group>"; };
-		C910054D17BDCAD000B4BE06 /* BRLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRLog.m; sourceTree = "<group>"; };
 		C910054F17BDCB9B00B4BE06 /* BRLogConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRLogConstants.h; sourceTree = "<group>"; };
 		C910055017BDCBDE00B4BE06 /* BRLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRLogFormatter.h; sourceTree = "<group>"; };
 		C910055117BDCBDE00B4BE06 /* BRLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRLogFormatter.m; sourceTree = "<group>"; };
@@ -146,8 +144,6 @@
 			children = (
 				C910055717BDD3C600B4BE06 /* BRLogging.h */,
 				C910055517BDD3B000B4BE06 /* BRLogging.m */,
-				C910054C17BDCAD000B4BE06 /* BRLog.h */,
-				C910054D17BDCAD000B4BE06 /* BRLog.m */,
 				C910054F17BDCB9B00B4BE06 /* BRLogConstants.h */,
 				C910055017BDCBDE00B4BE06 /* BRLogFormatter.h */,
 				C910055117BDCBDE00B4BE06 /* BRLogFormatter.m */,
