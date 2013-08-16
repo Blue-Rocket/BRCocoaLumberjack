@@ -44,8 +44,22 @@ Then, when you want to log something in Objective-C, use the handy macros `log4X
 	log4Debug(@"Hi again, from %@", NSStringFromClass([self class]));
 ```
 
-Note that `DDLogDebug` and `log4Debug` produce the same results, they are just two different styles to accomplish the same thing. The world loves variety, and the former style comes from CocoaLumberjack while the latter comes from the [log4cocoa](http://log4cocoa.sourceforge.net/) project (and is more similar to log4j if you're coming from that world).
+Note that `DDLogDebug` and `log4Debug` produce the same results, they are just two different styles to accomplish the same thing, which is something like this:
 
+	DEBUG 08162039:19.307 c07    ViewController.m:23 viewWillAppear:| Hi there, ViewController
+
+The world loves variety, and the `DDLog` style comes from CocoaLumberjack while the `log4` comes from the [log4cocoa](http://log4cocoa.sourceforge.net/) project (and is more similar to log4j if you're coming from that world).
+
+The logging output is by using the default formatter, which reads like this:
+
+ 1. Log level - _DEBUG_
+ 2. Timestamp - _08162039:19.307_ which is _MMddHHmm:ss.SSS_ format, as Aug 16 20:39:19.307
+ 3. Thread - _c07_
+ 4. File name and line number - _ViewController.m:23_
+ 5. Method name - _viewWillAppear:_
+ 6. Pipe - _|_
+ 7. Message - _Hi there, ViewController_
+ 
 Project Setup
 -------------
 
