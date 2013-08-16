@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'BRCocoaLumberjack' target in the 'BRCocoaLumberjack' project
+//
+
+#ifdef __OBJC__
+	#import <Foundation/Foundation.h>
+#endif
