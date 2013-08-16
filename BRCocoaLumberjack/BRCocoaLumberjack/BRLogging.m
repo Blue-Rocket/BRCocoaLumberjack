@@ -33,7 +33,7 @@ void BRLoggingSetupDefaultLoggingWithBundle(NSBundle *bundle) {
 	}
 	BRLoggingSetupLogging(@[[DDASLLogger sharedInstance], [DDTTYLogger sharedInstance]],
 						  [[BRLogFormatter alloc] init],
-						  LOG_LEVEL_DEBUG,
+						  LOG_LEVEL_INFO,
 						  dynamic);
 }
 
@@ -44,6 +44,7 @@ void BRLoggingSetupLogging(NSArray *loggers, id formatter, int defaultLevel, NSD
 	});
     BRCLogLevel = defaultLevel;
 	BRDefaultLogLevel = defaultLevel;
+	[DDLog removeAllLoggers];
 	for ( id<DDLogger> logger in loggers ) {
 		[DDLog addLogger:logger];
 		[logger setLogFormatter:formatter];
