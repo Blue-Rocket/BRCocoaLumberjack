@@ -110,7 +110,8 @@ static void configureDynamicLogFromDictionary(NSDictionary * localEnv) {
                 if ( [key isEqualToString:@"default"] ) {
                     BRDefaultLogLevel = logLevel;
                 } else {
-                    [DDLog setLogLevel:logLevel forClassWithName:key];
+					NSLog(@"Configuring class %@ log level %@ (%d)", key, value, logLevel);
+					[BRLogLevelClassMap setObject:@(logLevel) forKey:key];
                 }
             }
         }
