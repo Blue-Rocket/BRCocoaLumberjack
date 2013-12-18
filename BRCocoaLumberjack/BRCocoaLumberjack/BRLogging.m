@@ -37,13 +37,18 @@ void BRLoggingSetupDefaultLoggingWithBundle(NSBundle *bundle) {
 						  dynamic);
 }
 
+void BRLoggingSetupDefaultLogLevels(int defaultLevel, int defaultCLevel) {
+    BRCLogLevel = defaultLevel;
+	BRDefaultLogLevel = defaultCLevel;
+	NSLog(@"Default log level set to %d; default C log level set to %d", defaultLevel, defaultCLevel);
+}
+
 void BRLoggingSetupLogging(NSArray *loggers, id formatter, int defaultLevel, NSDictionary *dynamicLogging) {
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
 		BRLogLevelClassMap = [[NSMutableDictionary alloc] initWithCapacity:4];
 	});
-    BRCLogLevel = defaultLevel;
-	BRDefaultLogLevel = defaultLevel;
+	BRLoggingSetupDefaultLogLevels(defaultLevel, defaultLevel);
 	[DDLog removeAllLoggers];
 	for ( id<DDLogger> logger in loggers ) {
 		[DDLog addLogger:logger];
@@ -108,7 +113,7 @@ static void configureDynamicLogFromDictionary(NSDictionary * localEnv) {
             int logLevel = logLevelForKey([value lowercaseString]);
             if ( logLevel != (int)-1 ) {
                 if ( [key isEqualToString:@"default"] ) {
-                    BRDefaultLogLevel = logLevel;
+					BRLoggingSetupDefaultLogLevels(logLevel, logLevel);
                 } else {
 					NSLog(@"Configuring class %@ log level %@ (%d)", key, value, logLevel);
 					[BRLogLevelClassMap setObject:@(logLevel) forKey:key];
