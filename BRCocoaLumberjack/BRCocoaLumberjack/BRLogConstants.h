@@ -58,18 +58,20 @@ extern int BRCLogLevel;
 #define LOG_FLAG_INFO    (1 << 2)  // 0...00100
 #define LOG_FLAG_DEBUG   (1 << 3)  // 0...01000
 #define LOG_FLAG_TRACE   (1 << 4)  // 0...10000
-
+#define LOG_FLAG_VERBOSE LOG_FLAG_TRACE
 
 #define LOG_LEVEL_ERROR   (LOG_FLAG_ERROR)                     // 0...00001
 #define LOG_LEVEL_WARN    (LOG_FLAG_WARN   | LOG_LEVEL_ERROR ) // 0...00011
 #define LOG_LEVEL_INFO    (LOG_FLAG_INFO   | LOG_LEVEL_WARN  ) // 0...00111
 #define LOG_LEVEL_DEBUG   (LOG_FLAG_DEBUG  | LOG_LEVEL_INFO  ) // 0...01111
 #define LOG_LEVEL_TRACE   (LOG_FLAG_TRACE  | LOG_LEVEL_DEBUG ) // 0...11111
+#define LOG_LEVEL_VERBOSE LOG_LEVEL_TRACE
 
 #define LOG_ERROR   (BRLogLevelForClass([self class]) & LOG_FLAG_ERROR )
 #define LOG_WARN    (BRLogLevelForClass([self class]) & LOG_FLAG_WARN  )
 #define LOG_INFO    (BRLogLevelForClass([self class]) & LOG_FLAG_INFO  )
 #define LOG_DEBUG   (BRLogLevelForClass([self class]) & LOG_FLAG_DEBUG )
 #define LOG_TRACE   (BRLogLevelForClass([self class]) & LOG_FLAG_TRACE )
+#define LOG_VERBOSE LOG_TRACE
 
 #endif
