@@ -42,11 +42,13 @@ extern int BRCLogLevel;
 #undef DDLogError
 #undef DDLogWarn
 #undef DDLogInfo
+#undef DDLogDebug
 #undef DDLogVerbose
 
 #undef DDLogCError
 #undef DDLogCWarn
 #undef DDLogCInfo
+#undef DDLogCDebug
 #undef DDLogCVerbose
 
 // Now define everything how we want it
