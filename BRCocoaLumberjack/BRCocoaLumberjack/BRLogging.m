@@ -73,12 +73,6 @@ int BRLogLevelForClass(Class aClass) {
     return (logLevel) ? [logLevel intValue] : BRDefaultLogLevel;
 }
 
-static void setLogLevelForClass(int logLevel, Class aClass) {
-	if ( aClass != nil ) {
-		[BRLogLevelClassMap setObject:[NSNumber numberWithInt:logLevel] forKey:NSStringFromClass(aClass)];
-	}
-}
-
 static int logLevelForKey(NSString * levelString) {
     if ( [levelString isEqualToString:@"error"] ) {
         return LOG_LEVEL_ERROR;
@@ -92,15 +86,6 @@ static int logLevelForKey(NSString * levelString) {
         return LOG_LEVEL_TRACE;
     }
     return -1;
-}
-
-static void configureDynamicLog() {
-    NSString *envFilePath = [[NSBundle mainBundle] pathForResource:@"LocalEnvironment" ofType:@"plist"];
-	NSDictionary *localEnv = [NSDictionary dictionaryWithContentsOfFile:envFilePath];
-	if ( localEnv != nil ) {
-		NSLog(@"Logging configuration loaded from %@", envFilePath);
-		configureDynamicLogFromDictionary(localEnv);
-	}
 }
 
 static void configureDynamicLogFromDictionary(NSDictionary * localEnv) {
