@@ -24,16 +24,19 @@ extern int BRCLogLevel;
 #undef LOG_FLAG_ERROR
 #undef LOG_FLAG_WARN
 #undef LOG_FLAG_INFO
+#undef LOG_FLAG_DEBUG
 #undef LOG_FLAG_VERBOSE
 
 #undef LOG_LEVEL_ERROR
 #undef LOG_LEVEL_WARN
 #undef LOG_LEVEL_INFO
+#undef LOG_LEVEL_DEBUG
 #undef LOG_LEVEL_VERBOSE
 
 #undef LOG_ERROR
 #undef LOG_WARN
 #undef LOG_INFO
+#undef LOG_DEBUG
 #undef LOG_VERBOSE
 
 #undef DDLogError
