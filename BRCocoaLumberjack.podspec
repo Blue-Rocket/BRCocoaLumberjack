@@ -29,6 +29,6 @@ Pod::Spec.new do |s|
 #endif
 PCH
 
-  s.dependency 'CocoaLumberjack', '~> 1.8'
+  s.dependency 'CocoaLumberjack', '~> 1.8.1'
 
 end
