@@ -14,9 +14,13 @@
 #import "DDASLLogger.h"
 #import "DDTTYLogger.h"
 
+// our global C function logging level
 int BRCLogLevel;
 
+// global dictionary of class-level logging configuration
 static NSMutableDictionary *BRLogLevelClassMap;
+
+// global default Objective-C logging level
 static int BRDefaultLogLevel;
 
 static void configureDynamicLogFromDictionary(NSDictionary *localEnv);
