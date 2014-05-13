@@ -63,7 +63,38 @@ The logging output is by using the default formatter, which reads like this:
  5. Method name - _viewWillAppear:_
  6. Pipe - _|_
  7. Message - _Hi there, ViewController_
- 
+
+# Logging configuration
+
+The `BRLoggingSetupDefaultLogging()` function will configure **INFO** level logging
+by default. It will also look for a file named `LocalEnvironment.plist` in your
+application's main bundle, which should contain a dictionary with another dictionary
+on the key `logging`. The `logging` dictionary can contain the special key `default`
+to set the default logging level, to one of `error`, `warn`, `info`, `debug`, or
+`trace`.
+
+In addition, class-level logging can be configured by adding more keys to the
+`logging` dictionary, named after the class you want to configure. Classes inherit
+the configured log level of their parent, too, which allows you to configure entire
+class hierarchies by setting a logging level at the root of the hierarchy.
+
+For example, the following configures a default level of `warn` and the class
+`AppDelegate` (and any sub-classes) will use the `debug` level:
+
+```xml
+<plist version="1.0">
+<dict>
+	<key>logging</key>
+	<dict>
+		<key>default</key>
+		<string>warn</string>
+		<key>AppDelegate</key>
+		<string>debug</string>
+	</dict>
+</dict>
+</plist>
+```
+
 # Project Integration
 
 You can integrate BRCocoaLumberjack via [CocoaPods](http://cocoapods.org/), or
