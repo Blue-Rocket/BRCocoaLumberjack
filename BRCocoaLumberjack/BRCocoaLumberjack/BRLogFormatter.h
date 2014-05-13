@@ -8,6 +8,6 @@
 
 #import "DDLog.h"
 
-@interface BRLogFormatter : NSObject <DDLogFormatter>
+@interface BRLogFormatter : NSObject<DDLogFormatter>
 
 @end
