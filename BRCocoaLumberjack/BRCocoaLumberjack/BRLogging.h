@@ -9,9 +9,11 @@
 #ifndef BRCocoaLumberjack_BRLogging_h
 #define BRCocoaLumberjack_BRLogging_h
 
+@protocol DDLogFormatter;
+
 void BRLoggingSetupDefaultLogging();
 void BRLoggingSetupDefaultLoggingWithBundle(NSBundle *bundle);
-void BRLoggingSetupLogging(NSArray *loggers, id formatter, int defaultLevel, NSDictionary *dynamicLogging);
+void BRLoggingSetupLogging(NSArray *loggers, id<DDLogFormatter> formatter, int defaultLevel, NSDictionary *dynamicLogging);
 
 int BRLogLevelForClass(Class aClass);
 

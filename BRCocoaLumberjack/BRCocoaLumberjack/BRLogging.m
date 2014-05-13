@@ -43,7 +43,7 @@ void BRLoggingSetupDefaultLogLevels(int defaultLevel, int defaultCLevel) {
 	NSLog(@"Default log level set to %d; default C log level set to %d", defaultLevel, defaultCLevel);
 }
 
-void BRLoggingSetupLogging(NSArray *loggers, id formatter, int defaultLevel, NSDictionary *dynamicLogging) {
+void BRLoggingSetupLogging(NSArray *loggers, id<DDLogFormatter> formatter, int defaultLevel, NSDictionary *dynamicLogging) {
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
 	    BRLogLevelClassMap = [[NSMutableDictionary alloc] initWithCapacity:4];
