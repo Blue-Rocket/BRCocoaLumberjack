@@ -51,7 +51,7 @@
 		C910055317BDCF6400B4BE06 /* BRCocoaLumberjack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRCocoaLumberjack.h; sourceTree = SOURCE_ROOT; };
 		C910055517BDD3B000B4BE06 /* BRLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRLogging.m; sourceTree = "<group>"; };
 		C910055717BDD3C600B4BE06 /* BRLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRLogging.h; sourceTree = "<group>"; };
-		C95B8C511AED9EEC00768CC4 /* BRCocoaLumberjack.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = BRCocoaLumberjack.podspec; path = ../../BRCocoaLumberjack.podspec; sourceTree = "<group>"; };
+		C95B8C511AED9EEC00768CC4 /* BRCocoaLumberjack.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = BRCocoaLumberjack.podspec; path = ../../BRCocoaLumberjack.podspec; sourceTree = "<group>"; };
 		CCE2AE4F6B8D9F8726E6D334 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
