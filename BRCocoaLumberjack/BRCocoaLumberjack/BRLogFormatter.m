@@ -9,7 +9,6 @@
 #import "BRLogFormatter.h"
 
 #import "BRLogConstants.h"
-#import "DDLog.h"
 
 @implementation BRLogFormatter {
 	NSDateFormatter *dateFormatter;

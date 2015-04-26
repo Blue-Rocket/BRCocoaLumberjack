@@ -21,12 +21,8 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		58BEA78FCE60C442C659F581 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F654067019BF93E76516639 /* libPods.a */; };
 		C910052717BDCA3400B4BE06 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C910052617BDCA3400B4BE06 /* Foundation.framework */; };
-		C910054517BDCA6C00B4BE06 /* DDAbstractDatabaseLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C910053617BDCA6C00B4BE06 /* DDAbstractDatabaseLogger.m */; };
-		C910054617BDCA6C00B4BE06 /* DDASLLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C910053817BDCA6C00B4BE06 /* DDASLLogger.m */; };
-		C910054717BDCA6C00B4BE06 /* DDFileLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C910053A17BDCA6C00B4BE06 /* DDFileLogger.m */; };
-		C910054817BDCA6C00B4BE06 /* DDLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C910053C17BDCA6C00B4BE06 /* DDLog.m */; };
-		C910054917BDCA6C00B4BE06 /* DDTTYLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = C910053E17BDCA6C00B4BE06 /* DDTTYLogger.m */; };
 		C910055217BDCBDE00B4BE06 /* BRLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = C910055117BDCBDE00B4BE06 /* BRLogFormatter.m */; };
 		C910055617BDD3B000B4BE06 /* BRLogging.m in Sources */ = {isa = PBXBuildFile; fileRef = C910055517BDD3B000B4BE06 /* BRLogging.m */; };
 /* End PBXBuildFile section */
@@ -44,25 +40,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1404375259D92442971EF799 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8F654067019BF93E76516639 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C910052317BDCA3400B4BE06 /* libBRCocoaLumberjack.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBRCocoaLumberjack.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C910052617BDCA3400B4BE06 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C910052A17BDCA3400B4BE06 /* BRCocoaLumberjack-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BRCocoaLumberjack-Prefix.pch"; sourceTree = "<group>"; };
-		C910053517BDCA6C00B4BE06 /* DDAbstractDatabaseLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDAbstractDatabaseLogger.h; sourceTree = "<group>"; };
-		C910053617BDCA6C00B4BE06 /* DDAbstractDatabaseLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDAbstractDatabaseLogger.m; sourceTree = "<group>"; };
-		C910053717BDCA6C00B4BE06 /* DDASLLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDASLLogger.h; sourceTree = "<group>"; };
-		C910053817BDCA6C00B4BE06 /* DDASLLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDASLLogger.m; sourceTree = "<group>"; };
-		C910053917BDCA6C00B4BE06 /* DDFileLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDFileLogger.h; sourceTree = "<group>"; };
-		C910053A17BDCA6C00B4BE06 /* DDFileLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDFileLogger.m; sourceTree = "<group>"; };
-		C910053B17BDCA6C00B4BE06 /* DDLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDLog.h; sourceTree = "<group>"; };
-		C910053C17BDCA6C00B4BE06 /* DDLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDLog.m; sourceTree = "<group>"; };
-		C910053D17BDCA6C00B4BE06 /* DDTTYLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTTYLogger.h; sourceTree = "<group>"; };
-		C910053E17BDCA6C00B4BE06 /* DDTTYLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTTYLogger.m; sourceTree = "<group>"; };
 		C910054F17BDCB9B00B4BE06 /* BRLogConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRLogConstants.h; sourceTree = "<group>"; };
 		C910055017BDCBDE00B4BE06 /* BRLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRLogFormatter.h; sourceTree = "<group>"; };
 		C910055117BDCBDE00B4BE06 /* BRLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRLogFormatter.m; sourceTree = "<group>"; };
 		C910055317BDCF6400B4BE06 /* BRCocoaLumberjack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRCocoaLumberjack.h; sourceTree = SOURCE_ROOT; };
 		C910055517BDD3B000B4BE06 /* BRLogging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRLogging.m; sourceTree = "<group>"; };
 		C910055717BDD3C600B4BE06 /* BRLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BRLogging.h; sourceTree = "<group>"; };
+		C95B8C511AED9EEC00768CC4 /* BRCocoaLumberjack.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = BRCocoaLumberjack.podspec; path = ../../BRCocoaLumberjack.podspec; sourceTree = "<group>"; };
+		CCE2AE4F6B8D9F8726E6D334 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,18 +61,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				C910052717BDCA3400B4BE06 /* Foundation.framework in Frameworks */,
+				58BEA78FCE60C442C659F581 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66AC4B086FCD6A6556158759 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1404375259D92442971EF799 /* Pods.debug.xcconfig */,
+				CCE2AE4F6B8D9F8726E6D334 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C910051A17BDCA3400B4BE06 = {
 			isa = PBXGroup;
 			children = (
 				C910052817BDCA3400B4BE06 /* BRCocoaLumberjack */,
 				C910052517BDCA3400B4BE06 /* Frameworks */,
 				C910052417BDCA3400B4BE06 /* Products */,
+				66AC4B086FCD6A6556158759 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				C910052617BDCA3400B4BE06 /* Foundation.framework */,
+				8F654067019BF93E76516639 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -108,7 +110,6 @@
 				C910055317BDCF6400B4BE06 /* BRCocoaLumberjack.h */,
 				C910055417BDCFF100B4BE06 /* Source */,
 				C910052917BDCA3400B4BE06 /* Supporting Files */,
-				C910053417BDCA6C00B4BE06 /* Lumberjack */,
 			);
 			path = BRCocoaLumberjack;
 			sourceTree = "<group>";
@@ -116,27 +117,10 @@
 		C910052917BDCA3400B4BE06 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C95B8C511AED9EEC00768CC4 /* BRCocoaLumberjack.podspec */,
 				C910052A17BDCA3400B4BE06 /* BRCocoaLumberjack-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		C910053417BDCA6C00B4BE06 /* Lumberjack */ = {
-			isa = PBXGroup;
-			children = (
-				C910053517BDCA6C00B4BE06 /* DDAbstractDatabaseLogger.h */,
-				C910053617BDCA6C00B4BE06 /* DDAbstractDatabaseLogger.m */,
-				C910053717BDCA6C00B4BE06 /* DDASLLogger.h */,
-				C910053817BDCA6C00B4BE06 /* DDASLLogger.m */,
-				C910053917BDCA6C00B4BE06 /* DDFileLogger.h */,
-				C910053A17BDCA6C00B4BE06 /* DDFileLogger.m */,
-				C910053B17BDCA6C00B4BE06 /* DDLog.h */,
-				C910053C17BDCA6C00B4BE06 /* DDLog.m */,
-				C910053D17BDCA6C00B4BE06 /* DDTTYLogger.h */,
-				C910053E17BDCA6C00B4BE06 /* DDTTYLogger.m */,
-			);
-			name = Lumberjack;
-			path = ../../CocoaLumberjack/Lumberjack;
 			sourceTree = "<group>";
 		};
 		C910055417BDCFF100B4BE06 /* Source */ = {
@@ -158,9 +142,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C910053117BDCA3400B4BE06 /* Build configuration list for PBXNativeTarget "BRCocoaLumberjack" */;
 			buildPhases = (
+				E5394AC2145FA82F9BE3739A /* Check Pods Manifest.lock */,
 				C910051F17BDCA3400B4BE06 /* Sources */,
 				C910052017BDCA3400B4BE06 /* Frameworks */,
 				C910052117BDCA3400B4BE06 /* CopyFiles */,
+				B8BFB694FCD9704D1738DA82 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,6 +185,21 @@
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B8BFB694FCD9704D1738DA82 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C910055C17BDD75900B4BE06 /* Generate framework */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -213,6 +214,21 @@
 			shellPath = /bin/sh;
 			shellScript = "#  Adapted by script created by Kamil Kocemba on 09/01/2013.\n\nTARGET=BRCocoaLumberjack\nACTION=\"clean build\"\nLIB=libBRCocoaLumberjack.a\nPRODUCT=BRCocoaLumberjack\n\nOUTPUT_DIR=\"${PROJECT_DIR}/Framework\"\nFRAMEWORK_DIR=\"${OUTPUT_DIR}/${PRODUCT}.framework\"\nHEADERS_DIR=\"${OUTPUT_DIR}/Headers\"\n\n# Start clean by removing output dir\nrm -rf ${HEADERS_DIR}\nmkdir -p \"${HEADERS_DIR}\"\n\n# Copy source headers into flat Headers directory\ncp \"${PROJECT_DIR}/\"*.h \"${PROJECT_DIR}/BRCocoaLumberjack/\"*.h \"${PROJECT_DIR}/../CocoaLumberjack/Lumberjack/\"*.h \"${HEADERS_DIR}\"\n\n# change to \"Release Debug\" to build both\nCONFIGURATIONS=\"Release\"\nfor CONFIG in ${CONFIGURATIONS}; do\nFRAMEWORK_DIR=\"${OUTPUT_DIR}/${CONFIG}/${PRODUCT}.framework\"\n\necho \"${OUTPUT_DIR}\"\necho \"${FRAMEWORK_DIR}\"\nrm -rf \"${FRAMEWORK_DIR}\"\n\nDEVICE_DIR=${SYMROOT}/${CONFIG}-iphoneos\nSIMULATOR_DIR=${SYMROOT}/${CONFIG}-iphonesimulator\nUNIVERSAL_DIR=${SYMROOT}/${CONFIG}-universal\n\nxcodebuild -configuration ${CONFIG} -target ${TARGET} -sdk iphoneos ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO CONFIGURATION_BUILD_DIR=${DEVICE_DIR}\nxcodebuild -configuration ${CONFIG} -target ${TARGET} -sdk iphonesimulator ${ACTION} RUN_CLANG_STATIC_ANALYZER=NO CONFIGURATION_BUILD_DIR=${SIMULATOR_DIR}\n\nrm -rf \"${UNIVERSAL_DIR}\"\nmkdir \"${UNIVERSAL_DIR}\"\n\nlipo -create -output \"${UNIVERSAL_DIR}/${PRODUCT}\" \"${DEVICE_DIR}/${LIB}\" \"${SIMULATOR_DIR}/${LIB}\"\n\nmkdir -p \"${FRAMEWORK_DIR}/Versions/A\"\n\ncd \"${FRAMEWORK_DIR}/Versions\"\nln -sf A Current\n\ncp -r \"${HEADERS_DIR}\" \"${FRAMEWORK_DIR}/Versions/Current/\"\ncp \"${UNIVERSAL_DIR}/${PRODUCT}\" \"${FRAMEWORK_DIR}/Versions/Current\"\n\ncd \"${FRAMEWORK_DIR}\"\nln -sf \"Versions/Current/${PRODUCT}\" \"${PRODUCT}\"\nln -sf Versions/Current/Headers Headers\ndone\n";
 		};
+		E5394AC2145FA82F9BE3739A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -220,11 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C910054517BDCA6C00B4BE06 /* DDAbstractDatabaseLogger.m in Sources */,
-				C910054617BDCA6C00B4BE06 /* DDASLLogger.m in Sources */,
-				C910054717BDCA6C00B4BE06 /* DDFileLogger.m in Sources */,
-				C910054817BDCA6C00B4BE06 /* DDLog.m in Sources */,
-				C910054917BDCA6C00B4BE06 /* DDTTYLogger.m in Sources */,
 				C910055217BDCBDE00B4BE06 /* BRLogFormatter.m in Sources */,
 				C910055617BDD3B000B4BE06 /* BRLogging.m in Sources */,
 			);
@@ -293,6 +304,7 @@
 		};
 		C910053217BDCA3400B4BE06 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1404375259D92442971EF799 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/BRCocoaLumberjack.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -305,6 +317,7 @@
 		};
 		C910053317BDCA3400B4BE06 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCE2AE4F6B8D9F8726E6D334 /* Pods.release.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/BRCocoaLumberjack.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

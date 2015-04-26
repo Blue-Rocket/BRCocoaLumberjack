@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Blue Rocket, Inc. Distributable under the terms of the Apache License, Version 2.0.
 //
 
-#import "DDLog.h"
+#import <CocoaLumberjack/DDLog.h>
 
 /**
  * Log formatter with level, timestamp, thread, file, and method details.
