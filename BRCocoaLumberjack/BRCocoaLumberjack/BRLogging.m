@@ -11,8 +11,8 @@
 #import <objc/runtime.h>
 #import "BRLogFormatter.h"
 #import "BRLogConstants.h"
-#import "DDASLLogger.h"
-#import "DDTTYLogger.h"
+#import <CocoaLumberjack/DDASLLogger.h>
+#import <CocoaLumberjack/DDTTYLogger.h>
 
 // our global C function logging level
 int BRCLogLevel;

@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "BRCocoaLumberjack"
-  s.version      = "1.8.1"
-  s.summary      = "CocoaLumberjack as a framework for iOS."
+  s.version      = "1.9.0"
+  s.summary      = "Easy CocoaLumberjack for iOS."
 
   s.description  = <<-DESC
                     This project provides a way to integrate the
@@ -29,6 +29,6 @@ Pod::Spec.new do |s|
 #endif
 PCH
 
-  s.dependency 'CocoaLumberjack', '~> 1.8.1'
+  s.dependency 'CocoaLumberjack', '~> 1.9'
 
 end

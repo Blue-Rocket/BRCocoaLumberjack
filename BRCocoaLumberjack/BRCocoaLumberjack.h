@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Blue Rocket, Inc. Distributable under the terms of the Apache License, Version 2.0.
 //
 
-#import <BRCocoaLumberjack/DDLog.h>
+#import <CocoaLumberjack/DDLog.h>
 #import <BRCocoaLumberjack/BRLogConstants.h>
 #import <BRCocoaLumberjack/BRLogging.h>
 
