@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BRCocoaLumberjack"
-  s.version      = "1.8.1"
+  s.version      = "1.9.0"
   s.summary      = "CocoaLumberjack as a framework for iOS."
 
   s.description  = <<-DESC
