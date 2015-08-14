@@ -6,14 +6,13 @@
 //  Copyright (c) 2013 Blue Rocket, Inc. Distributable under the terms of the Apache License, Version 2.0.
 //
 
-#import <CocoaLumberjack/DDLog.h>
+#import <CocoaLumberjack/CocoaLumberjack.h>
 #import <BRCocoaLumberjack/BRLogConstants.h>
 #import <BRCocoaLumberjack/BRLogging.h>
 
 // Always log Errors
-#define DDLogError(frmt, ...)    SYNC_LOG_OBJC_MAYBE(BRLogLevelForClass([self class]), LOG_FLAG_ERROR,  0, frmt, ##__VA_ARGS__)
-
-#define DDLogCError(frmt, ...)   SYNC_LOG_C_MAYBE(BRCLogLevel, LOG_FLAG_ERROR,  0, frmt, ##__VA_ARGS__)
+#define DDLogError(frmt, ...)    LOG_MAYBE(NO,                BRLogLevelForClass([self class]), DDLogFlagError,   0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
+#define DDLogCError(frmt, ...)   LOG_MAYBE(NO,                BRCLogLevel, DDLogFlagError,   0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
 
 // log4Cocoa compatibility
 #define log4Error DDLogError
@@ -21,15 +20,15 @@
 
 #ifdef LOGGING
 
-#define DDLogWarn(frmt, ...)     SYNC_LOG_OBJC_MAYBE(BRLogLevelForClass([self class]), LOG_FLAG_WARN,  0, frmt, ##__VA_ARGS__)
-#define DDLogInfo(frmt, ...)     SYNC_LOG_OBJC_MAYBE(BRLogLevelForClass([self class]), LOG_FLAG_INFO,  0, frmt, ##__VA_ARGS__)
-#define DDLogDebug(frmt, ...)    SYNC_LOG_OBJC_MAYBE(BRLogLevelForClass([self class]), LOG_FLAG_DEBUG, 0, frmt, ##__VA_ARGS__)
-#define DDLogTrace(frmt, ...)    SYNC_LOG_OBJC_MAYBE(BRLogLevelForClass([self class]), LOG_FLAG_TRACE, 0, frmt, ##__VA_ARGS__)
+#define DDLogWarn(frmt, ...)     LOG_MAYBE(LOG_ASYNC_ENABLED, BRLogLevelForClass([self class]), DDLogFlagWarning, 0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
+#define DDLogInfo(frmt, ...)     LOG_MAYBE(LOG_ASYNC_ENABLED, BRLogLevelForClass([self class]), DDLogFlagInfo,    0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
+#define DDLogDebug(frmt, ...)    LOG_MAYBE(LOG_ASYNC_ENABLED, BRLogLevelForClass([self class]), DDLogFlagDebug,   0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
+#define DDLogVerbose(frmt, ...)  LOG_MAYBE(LOG_ASYNC_ENABLED, BRLogLevelForClass([self class]), DDLogFlagVerbose, 0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
 
-#define DDLogCWarn(frmt, ...)    SYNC_LOG_C_MAYBE(BRCLogLevel, LOG_FLAG_WARN,  0, frmt, ##__VA_ARGS__)
-#define DDLogCInfo(frmt, ...)    SYNC_LOG_C_MAYBE(BRCLogLevel, LOG_FLAG_INFO,  0, frmt, ##__VA_ARGS__)
-#define DDLogCDebug(frmt, ...)   SYNC_LOG_C_MAYBE(BRCLogLevel, LOG_FLAG_DEBUG, 0, frmt, ##__VA_ARGS__)
-#define DDLogCTrace(frmt, ...)   SYNC_LOG_C_MAYBE(BRCLogLevel, LOG_FLAG_TRACE, 0, frmt, ##__VA_ARGS__)
+#define DDLogCWarn(frmt, ...)    LOG_MAYBE(LOG_ASYNC_ENABLED, LOG_LEVEL_DEF, DDLogFlagWarning, 0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
+#define DDLogCInfo(frmt, ...)    LOG_MAYBE(LOG_ASYNC_ENABLED, LOG_LEVEL_DEF, DDLogFlagInfo,    0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
+#define DDLogCDebug(frmt, ...)   LOG_MAYBE(LOG_ASYNC_ENABLED, LOG_LEVEL_DEF, DDLogFlagDebug,   0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
+#define DDLogCVerbose(frmt, ...) LOG_MAYBE(LOG_ASYNC_ENABLED, LOG_LEVEL_DEF, DDLogFlagVerbose, 0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
 
 // log4Cocoa compatibility
 #define log4Warn DDLogWarn

@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 	// Override point for customization after application launch.
-	log4Info(@"Hello from BRCocoaLumberjack: %@", launchOptions);
+	log4Info(@"Hello from BRCocoaLumberjack 2.0: %@", launchOptions);
 	log4Debug(@"Debug logging enabled!");
 	return YES;
 }

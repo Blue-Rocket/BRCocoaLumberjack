@@ -1,1 +1,1 @@
-../../../../../BRCocoaLumberjack/BRCocoaLumberjackPod/BRCocoaLumberjack.h
+../../../../../BRCocoaLumberjack/BRCocoaLumberjack.h
