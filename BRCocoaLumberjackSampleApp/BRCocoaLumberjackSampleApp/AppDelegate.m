@@ -20,6 +20,8 @@
 	// Override point for customization after application launch.
 	log4Info(@"Hello from BRCocoaLumberjack 2.0: %@", launchOptions);
 	log4Debug(@"Debug logging enabled!");
+	log4Trace(@"Trace logging enabled!");
+	DDLogVerbose(@"Verbose logging eanbled!");
 	return YES;
 }
 

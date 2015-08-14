@@ -30,6 +30,10 @@
 #define DDLogCDebug(frmt, ...)   LOG_MAYBE(LOG_ASYNC_ENABLED, LOG_LEVEL_DEF, DDLogFlagDebug,   0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
 #define DDLogCVerbose(frmt, ...) LOG_MAYBE(LOG_ASYNC_ENABLED, LOG_LEVEL_DEF, DDLogFlagVerbose, 0, nil, __PRETTY_FUNCTION__, frmt, ##__VA_ARGS__)
 
+// 1.x backwards compatibility
+#define DDLogTrace DDLogVerbose
+#define DDLogCTrace DDLogCVerbose
+
 // log4Cocoa compatibility
 #define log4Warn DDLogWarn
 #define log4Info DDLogInfo
@@ -46,11 +50,13 @@
 #define DDLogWarn(...)
 #define DDLogInfo(...)
 #define DDLogDebug(...)
+#define DDLogVerbose(...)
 #define DDLogTrace(...)
 
 #define DDLogCWarn(...)
 #define DDLogCInfo(...)
 #define DDLogCDebug(...)
+#define DDLogCVerbose(...)
 #define DDLogCTrace(...)
 
 // log4Cocoa compatibility
