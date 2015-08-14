@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "BRCocoaLumberjack"
-  s.version      = "1.9.0"
+  s.version      = "2.0.0"
   s.summary      = "Easy CocoaLumberjack for iOS."
 
   s.description  = <<-DESC
@@ -13,12 +13,12 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/Blue-Rocket/BRCocoaLumberjack"
   s.license      = "Apache License, Version 2.0"
-  s.author       = { "Matt Magoffin" => "git+matt@msqr.us" }
+  s.author       = { "Matt Magoffin" => "matt@bluerocket.us" }
   s.platform     = :ios, "5.0"
   s.source       = { :git => "https://github.com/Blue-Rocket/BRCocoaLumberjack.git", 
                      :tag => s.version.to_s }
 
-  s.source_files  = "BRCocoaLumberjack/BRCocoaLumberjackPod/BRCocoaLumberjack.h", 
+  s.source_files  = "BRCocoaLumberjack/BRCocoaLumberjack.h",
                     "BRCocoaLumberjack/BRCocoaLumberjack/*.{h,m}"
 
   s.requires_arc = true
@@ -29,6 +29,6 @@ Pod::Spec.new do |s|
 #endif
 PCH
 
-  s.dependency 'CocoaLumberjack', '~> 1.9'
+  s.dependency 'CocoaLumberjack', '~> 2.0'
 
 end
