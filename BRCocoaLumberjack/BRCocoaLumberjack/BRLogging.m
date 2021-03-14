@@ -13,6 +13,7 @@
 #import "BRLogConstants.h"
 #import <CocoaLumberjack/DDASLLogger.h>
 #import <CocoaLumberjack/DDTTYLogger.h>
+#import <CocoaLumberjack/DDOSLogger.h>
 
 // our global C function logging level
 int BRCLogLevel;
@@ -35,10 +36,20 @@ void BRLoggingSetupDefaultLoggingWithBundle(NSBundle *bundle) {
 	if ( dynamic != nil ) {
 		NSLog(@"Logging configuration loaded from %@", envFilePath);
 	}
-	BRLoggingSetupLogging(@[[DDASLLogger sharedInstance], [DDTTYLogger sharedInstance]],
-	                      [[BRLogFormatter alloc] init],
-	                      LOG_LEVEL_INFO,
-	                      dynamic);
+    NSArray *loggers = nil;
+    if ( @available(iOS 10.0, *) ) {
+        loggers = @[[DDOSLogger sharedInstance]];
+    } else {
+#if TARGET_IPHONE_SIMULATOR
+        loggers = @[[DDASLLogger sharedInstance]];
+#else
+        loggers = @[[DDASLLogger sharedInstance], [DDTTYLogger sharedInstance]];
+#endif
+    }
+    BRLoggingSetupLogging(loggers,
+                          [[BRLogFormatter alloc] init],
+                          LOG_LEVEL_INFO,
+                          dynamic);
 }
 
 void BRLoggingSetupDefaultLogLevels(int defaultLevel, int defaultCLevel) {
